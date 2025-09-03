@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Print Numbers</title>
+</head>
+
+<body>
+    <script>
+
+        // 1. Print Numbers 1 to 20
+        for (let i = 1; i <= 20; i++) {
+            console.log(i);
+        }
+
+        // 2. Sum of First N Numbers
+        let n = 5;
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            sum += i;
+        }
+        console.log("Sum =", sum);
+
+        // 3. Multiplication Table
+        let num = 1;
+        for (let i = 1; i <= 10; i++) {
+            console.log(num + " x " + i + " = " + (num * i));
+        }
+
+        // 4. Reverse Counting 50 to 1
+        for (let i = 50; i >= 1; i--) {
+            console.log(i);
+        }
+
+        // 5. Factorial
+        let factNum = 5;
+        let fact = 1;
+        for (let i = 1; i <= factNum; i++) {
+            fact *= i;
+        }
+        console.log("Factorial =", fact);
+
+        // 6. Even Numbers 1 to 30
+        for (let i = 1; i <= 30; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+        }
+
+        // 7. Characters in a String
+        let str = "Hello";
+        for (let i = 0; i < str.length; i++) {
+            console.log(str[i]);
+        }
+
+        // 8. Count Digits
+        let numDigits = 12345;
+        let count = 0;
+        let temp = numDigits;
+        while (temp > 0) {
+            count++;
+            temp = Math.floor(temp / 10);
+        }
+        console.log("Digits =", count);
+
+        // 9. Pattern Printing
+        for (let i = 1; i <= 3; i++) {
+            let stars = "";
+            for (let j = 1; j <= i; j++) {
+                stars += "*";
+            }
+            console.log(stars);
+        }
+
+        // 10. Array Sum
+        let arr = [10, 20, 30, 40, 50];
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+            total += arr[i];
+        }
+        console.log("Array Sum =", total);
+
+    </script>
+</body>
+
+</html>

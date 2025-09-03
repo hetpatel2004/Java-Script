@@ -1,62 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
-</head>
-<body>
-      <script>
-        
-        // function sumoftwonumber( num1 , num2) {
-        //     console.log(num1 + num2);
-        // }
-        // function sumoftwonumber( num1 , num2) {
-        //    let result = num1 + num2 ;
-        //    return result
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Introduction</title>
+  </head>
+  <body>
+    <h1>DOM</h1>
+    <p>Document Object Model</p>
 
-        // }
-        
-        // let sum = sumoftwonumber(4,8);
-        // console.log(sum);
+    <!-- <form action="">
+    <input type="text" id="first" class="name"  name="first"/> <br><br>
+    <input type="text" id="second" class="same" value=" Two "  name="fname"/><br><br>
+    <input type="text" id="third" class="same" value=" Three " name="fname"/><br><br>
+    <input type="text" id="fourth" class="same" value=" Four " name="fname"/><br><br>
+    <input type="submit" value="submit" onclick="submit()">
+    </form>
+    <script>
+     
+function submit() {
+    let inp_data = document.getElementsByClassName("first").value
+    console.log(inp_data);
+    
+} -->
 
-        // function name() {
-        //     console.log("Hi its me my name is Het");
-            
-        // }
-        // name ()
 
-        // function practice1(a , b) {
-        //     let sum = a + b;
-        //     console.log("sum of A and B is :",sum);
-        //     console.log(sum);
-        //     return
-            
-        // }
-        // practice1(3,7)
-
-        // function if_else_example(a , b){
-
-        //     if (a == b) {
-        //         console.log(" yes its true :-");
-                
-        //     } 
-        //     else{
-        //         console.log("no the condition is false :-");
-        //     }
-        // }
-        // if_else_example(4,4);
-
-        function loop_example(i) {
-            for( let i = 1; i <= 5; i++ ){
-                console.log("");
-                for( let j = 1; j <= i; j++ ){
-                    console.log("*");
-                }
-                console.log(i);
-            }
-        }
-        loop_example(5);
-      </script>
-</body>
+<form>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="sub()">Submit</button>
+</form>
+<script>
+  function sub(){
+    let value = document.getElementById("username").value;
+console.log(value); 
+  }
+// empty at start (because user hasn’t typed yet)
+      
+    </script>
+  </body>
 </html>
