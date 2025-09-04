@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Function tasks </title>
 </head>
 <body>
     <Script>
@@ -20,7 +20,35 @@
             }
             return check;
         }
-        number();
+        number(0);
+        // 2.Write a function that takes two numbers and returns their sum, difference, product, and division.
+        function task2(a , b){
+            let sum = (a + b);
+            console.log("Sum of two numbers",sum);
+            let difference = ( a - b );
+            console.log("Difference between two number ",difference);
+            let product = (a * b);
+            console.log("Product of two numbers ",product);
+            let division = (a % b);
+            console.log("Division of two numbers",division);            
+            
+            return;
+        }
+        task2( 2 ,4);
+        // 3.Write a function that takes a string and returns the number of vowels in it.
+        function task3( str ) {
+            let check = "aeiouAEIOU"
+            let count=0;
+            for(let ch of str){
+                if(check.includes(ch)){
+                    count++;
+                }
+                console.log(count);
+                
+            }
+        
+        }
+        task3("")
     </Script>
 </body>
 </html>
