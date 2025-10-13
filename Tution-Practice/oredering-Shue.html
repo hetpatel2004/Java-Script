@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skechers Product Page</title>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1100px;
+  align-items: flex-start;
+}
+
+.product-image img {
+  width: 480px;
+  border-radius: 10px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+.price span {
+  font-size: 14px;
+  color: #777;
+}
+
+.color-select h4,
+.size-select h4,
+.quantity h4 {
+  margin-bottom: 8px;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+.color.blue { background: linear-gradient(45deg, #00aaff, #0099cc); }
+.color.yellow { background: linear-gradient(45deg, #fcd34d, #f59e0b); }
+.color.lightblue { background: linear-gradient(45deg, #93c5fd, #60a5fa); }
+
+.sizes button {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px 14px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sizes button:hover {
+  background: #00aaff;
+  color: #fff;
+}
+
+.availability {
+  margin: 20px 0;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.qty-control button {
+  background: #eee;
+  border: none;
+  font-size: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.qty-control input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-cart {
+  background: #0077cc;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.add-cart:hover {
+  background: #005fa3;
+}
+
+</style>  
+</head>
+<body>
+
+  <section class="product-container">
+    <!-- Left side: Product Image -->
+    <div class="product-image">
+      <img src="./198376633790-1.jpg">
+    </div>
+
+    <!-- Right side: Product Details -->
+    <div class="product-details">
+      <h1 class="title">SKECHERS AERO BURST</h1>
+      <div class="rating">
+        ⭐⭐⭐⭐☆ (4.8) | <a href="#">42 Reviews</a>
+      </div>
+      <p class="price">₹17,999.00 <span>(incl. of all taxes)</span></p>
+
+      <div class="color-select">
+        <h4>Select Color</h4>
+        <div class="colors">
+          <span class="color blue"></span>
+          <span class="color yellow"></span>
+          <span class="color lightblue"></span>
+        </div>
+      </div>
+
+      <div class="size-select">
+        <h4>Select Size</h4>
+        <div class="sizes">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>10</button>
+          <button>11</button>
+        </div>
+      </div>
+
+      <div class="availability">
+        <p><b>Availability:</b> In Stock</p>
+      </div>
+
+      <div class="quantity">
+        <h4>Quantity</h4>
+        <div class="qty-control">
+          <button>-</button>
+          <input type="text" value="1">
+          <button>+</button>
+        </div>
+      </div>
+
+      <button id="submit " class="add-cart">ADD TO CART</button>
+    </div>
+</section>
+    <script>
+        
+    </script>
+</body>
+</html>
