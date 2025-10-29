@@ -1,0 +1,242 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's on your mind</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+    
+    .mind-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .mind-section h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .slider-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slider {
+      display: flex;
+      gap: 50px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      padding: 0 50px;
+    }
+
+    .item {
+      flex: 0 0 auto;
+      width: 170px;
+      text-align: center;
+    }
+
+    .item img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .item p {
+      font-size: 20px;
+      color: #555;
+      margin: 0;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f3f3f3;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 20px;
+    }
+
+    .arrow:hover {
+      background: #e8e8e8;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .slider {
+        gap: 25px;
+      }
+      .item img {
+        width: 110px;
+        height: 110px;
+      }
+      .item p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="mind-section">
+    <h2>What's on your mind?</h2>
+    <div class="slider-container">
+      <button class="arrow left" id="prev">◀</button>
+      <div class="slider" id="slider">
+        <div class="item"><img src="images/item_1.png" alt="Pizzas"><p>Pizzas</p></div>
+        <div class="item"><img src="images/item_2.png" alt="Biryani"><p>Biryani</p></div>
+        <div class="item"><img src="images/item_3.png" alt="Chinese"><p>Chinese</p></div>
+        <div class="item"><img src="images/item_4.png" alt="Noodles"><p>Noodles</p></div>
+        <div class="item"><img src="images/item_5.png" alt="Khichdi"><p>Khichdi</p></div>
+        <div class="item"><img src="images/item_6.png" alt="Coffee"><p>Coffee</p></div>
+        <div class="item"><img src="images/item_7.png" alt="Tea"><p>Tea</p></div>
+      </div>
+      <button class="arrow right" id="next">▶</button>
+    </div>
+  </section>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+    const itemWidth = document.querySelector('.item').offsetWidth + 50;
+
+    next.addEventListener('click', () => {
+      slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+    });
+    prev.addEventListener('click', () => {
+      slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+
+      <!-- Bootstrap  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+
+
+    <div id="box"></div>
+    <script>
+      //   let myPromise = new Promise((resolve, reject) => {
+      //     let success = true;
+
+      //     if (success) {
+      //       resolve("Operation successful!");
+      //     } else {
+      //       reject("Something went wrong.");
+      //     }
+      //   });
+
+      //   console.log(myPromise);
+
+      //   // Consuming the promise
+      //   myPromise
+      //     .then((result) => console.log(result)) // if resolved
+      //     .catch((error) => console.log(error)) // if rejected
+      //     .finally(() => console.log("Done")); // always runs
+
+    //   const myPromise = new Promise((resolve, reject) => {
+    //     // Simulate an asynchronous operation
+    //     setTimeout(() => {
+    //       const success = true; // or false for rejection
+    //       if (success) {
+    //         resolve("Data fetched successfully!"); // Fulfill the promise
+    //       } else {
+    //         reject("Error fetching data."); // Reject the promise
+    //       }
+    //     }, 2000);
+    //   });
+
+    //   myPromise
+    //     .then((data) => {
+    //       console.log("Success:", data); // Executed if the promise is fulfilled
+    //     })
+    //     .catch((error) => {
+    //       console.error("Error:", error); // Executed if the promise is rejected
+    //     })
+    //     .finally(() => {
+    //       console.log("Promise settled (either fulfilled or rejected)."); // Always executed
+    //     });
+
+
+
+
+     fetch("https://fakestoreapi.com/products")
+        .then((response) => response.json()
+        )
+        // .catch(err => console.log(err))
+        .then((data) => {
+            console.log(data)
+         data.forEach(product => {
+                   box.innerHTML = `<div class="card" style="width: 18rem;">
+                                        <img src=${product.image} class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${product.title}</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>`
+            });
+        }
+        );
+
+
+        if (product.title == 10)
+        {
+          overflowhiden
+        }
+             
+    </script>
+
+
+<!-- BootstrapJs  -->
+
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

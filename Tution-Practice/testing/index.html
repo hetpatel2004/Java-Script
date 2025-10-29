@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body {
+            background: #0e1116;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .card {
+            background: #1b1f27;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        button {
+            background: #2d2f36;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background: #3c3f47;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timeline">
+        <h1 id="year">2014</h1>
+        <div class="card">
+            <p id="text">Launch of our Food Delivery business</p>
+            <img id="image" src="Assist/image/1.png" alt="Food Icon" />
+        </div>
+        <div class="buttons">
+            <button id="prev">⬅</button>
+            <button id="next">➡</button>
+        </div>
+    </div>
+    <script>
+
+        const data = [
+            {
+                year: 2014,
+                text: "Launch of our Food Delivery business",
+                image: ""
+            },
+            {
+                year: 2016,
+                text: "Expanded to 3 new cities",
+                image: "het.avif"
+            },
+            {
+                year: 2018,
+                text: "Reached 1 million users!",
+                image: "patel.jpg"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        const yearEl = document.getElementById("year");
+        const textEl = document.getElementById("text");
+        const imageEl = document.getElementById("image");
+
+        document.getElementById("next").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % data.length;
+            updateContent();
+        });
+
+        document.getElementById("prev").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + data.length) % data.length;
+            updateContent();
+        });
+
+        function updateContent() {
+            const item = data[currentIndex];
+            yearEl.textContent = item.year;
+            textEl.textContent = item.text;
+            imageEl.src = item.image;
+        }
+
+
+
+    </script>
+</body>
+</html>

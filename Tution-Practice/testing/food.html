@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+
+    <script>
+        const food = [{
+            imgUrl: "img1.avif",
+            title: "img1"
+        },
+        {
+            imgUrl: "img2.avif",
+            title: "img2"
+        },
+        {
+            imgUrl: "img3.avif",
+            title: "img3"
+        },
+        {
+            imgUrl: "img4.avif",
+            title: "img4"
+        },
+        {
+            imgUrl: "img5.avif",
+            title: "img5"
+        },
+        // {
+        //     imgUrl: "img6.avif",
+        //     title: "img6"
+        // },
+        
+        // {
+        //     imgUrl: "img7.avif",
+        //     title: "img7"
+        // },
+        // {
+        //     imgUrl: "img8.avif",
+        //     title: "img8"
+        // },
+        // {
+        //     imgUrl: "img9.avif",
+        //     title: "img9"
+        // },
+        // {
+        //     imgUrl: "img10.avif",
+        //     title: "img10"
+        // },
+
+    ]
+    
+    let box = document.getElementById("box");
+    food.forEach(element => {
+        box.innerHTML += `
+        <img src="${element.imgUrl}" alt="" srcset="">`
+        });
+    </script>
+</body> 
+
+</html>

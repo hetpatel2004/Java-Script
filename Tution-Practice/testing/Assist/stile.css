@@ -1,0 +1,28 @@
+body {
+  background: #0e1116;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.card {
+  background: #1b1f27;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+button {
+  background: #2d2f36;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+button:hover {
+  background: #3c3f47;
+}
