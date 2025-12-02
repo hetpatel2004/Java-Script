@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>Display the browser's width and height on the screen using the window object.
+
+        </li>
+        <li>Create two buttons: one for going back and one for going forward using the history object.
+
+        </li>
+        <li>Build a page that redirects the user to another URL after 5 seconds (use setTimeout + location.href).
+
+        </li>
+        <li>Ask the user for two numbers using prompt(), add them, and show the result using alert().
+
+        </li>
+        <li>Create a confirm box:
+
+            If user selects OK → show "You accepted".
+            If user selects Cancel → show "You cancelled".
+        </li>
+    </ol>
+    <button onclick="het()">het</button>
+    <!-- q2 -->
+    <a href="https://www.youtube.com/"> yt</a>
+    <button onclick="history.back()">history back</button>
+    <button onclick="history.forward()">history </button>
+    <script>
+        // q1
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+        // q3  
+        // setTimeout(
+        // function het() {
+        // let abc = window.location.href = "https://www.youtube.com/";  
+        // },7000);
+
+        // q4
+        alert("Hey welcome to this site");
+        let name = prompt("Enatr your name");
+        console.log("Q-4 welcome", name);
+        
+        // q5
+        let user_req = confirm("this site requers some personl info continue if you want");
+        if (user_req == 1) {
+            console.log("You accepted");   
+        }
+        else{
+            console.log("You cancelled");
+        }
+    </script>
+</body>
+
+</html>
