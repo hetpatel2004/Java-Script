@@ -1,99 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>variable</title>
+    <title>variables practice</title>
 </head>
-
 <body>
-    <h1>Variables</h1>
-    <ol>
-        <li>ver</li>
-        <li>let</li>
-        <li>const</li>
-    </ol>
-    <h1>student-task</h1>
-    <ol>
-        <li>Create a program using var, let, and const. Try redeclaring each and observe the errors.</li>
-    </ol>
     <script>
-        // q1
-        // var a = 10;        //Initialization 
-        // var a = 20;      //Re - declare is Possible
-        // a = 30;         // Re - Assignment is Possible
-        // console.log(a);
-
-
-        // let b = 10;        //Initialization 
-        // // let b = 20;      //Re - declare is not-Possible
-        // b = 30;         // Re - Assignment is Possible
-        // console.log(b);
-
-        // const c = 10;        //Initialization 
-        // // const c = 20;      //Re - declare is not-Possible
-        // // c = 30;         // Re - Assignment is not-Possible
-        // console.log(c);
-
-        //q2
-        // Write a function containing a variable. Try accessing it outside the function.
-
-        // {
-        //     let name1 = "het";
-        //     var name2 = "het patel";
-        //     const name3 = "patel";
-
-        //     console.log(name1);
-        //     console.log(name2);
-        //     console.log(name3);
-        // }
-        // // console.log(name1);//shows error 
-        // console.log(name2);// not showing error in because ver is globel scope 
-        // console.log(name3);//shows error because let and ver are block scope 
-
-        // q3
-        // Use an if block and create two variables using let and const. Print them inside and outside the block.
-        //         {
-        //     let name1= "het";
-        //     var name2= "het patel";
-        //     const name3 = "patel";
-
-        //      console.log(name1);
-        //     console.log(name2);
-        //     console.log(name3);
-        // }
-        //     console.log(name1);
-        //     console.log(name2);
-        //     console.log(name3);
-
-        //Q5
-        // Declare a global variable, a function variable, and a block variable. Print them to understand scope differences.
-
-        let name4 = "kavy";
-        var name5 = "kavy patel";
-        const name6 = "patel";
+        let a = 5;
+        const b = 40;
+        console.log(a);// shows value 5 
+        console.log(b); 
+        // console.log(c);//error because it is declare in {block}
+        
         {
-            let name1 = "het";
-            var name2 = "het patel";
-            const name3 = "patel";
+            let a = 100;
+            const c = 1011;
+            console.log(a); //shows 100
+            console.log(b);
+            console.log(c);
 
-            console.log(name1,"printed in block scope");
-            console.log(name2,"printed in block scope");
-            console.log(name3,"printed in block scope");  
-            console.log(name4,"printed in block scope");
-            console.log(name5,"printed in block scope");
-            console.log(name6,"printed in block scope");  //all will run 
         }
-        // console.log(name1,"printed in globel scope");// show error
-        console.log(name2,"printed in globel scope");
-        // console.log(name3,"printed in globel scope");// show error
-        console.log(name4,"printed in globel scope");
-        console.log(name5,"printed in globel scope");
-        console.log(name6,"printed in globel scope");  
-
-
     </script>
 </body>
-
 </html>
