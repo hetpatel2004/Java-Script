@@ -7,87 +7,34 @@
 </head>
 <body>
     <h1>Methors</h1>
-    <ul>
-  <li><b>What is the length property in a string?</b><br>
-      It returns the total number of characters in a string.
-  </li>
+    <ol>
+  <!-- String Method Tasks -->
+  <li>Take a string: "JavaScript Programming". Print the string in lowercase, uppercase, and its length.</li>
+  <li>From the string "Frontend Development", extract the word "Frontend" using slice().</li>
+  <li>Take a string with extra spaces: " Learn JS Fast ". Remove the spaces using trim().</li>
+  <li>Check if the string "welcome to coding" contains the word "coding" using includes().</li>
+  <li>Replace all occurrences of "JS" with "JavaScript" in "JS is fun. I like JS. JS is powerful." using replaceAll().</li>
+  <li>Convert the string "A,B,C,D,E" into an array.</li>
+  <li>Find the position of the word "World" in the string "Hello World" using indexOf().</li>
+  <li>Extract the last 4 characters from the string "JavaScript".</li>
+  <li>Capitalize the first letter of the string "developer".</li>
+  <li>Count how many times the letter "a" appears in "banana".</li>
 
-  <li><b>Difference between slice() and substring()?</b><br>
-      slice() supports negative indexes; substring() does not.
-  </li>
+  <!-- Number Method Tasks -->
+  <li>Convert the number 45.6789 to 2 decimal places and 3 significant digits.</li>
+  <li>Convert the number 200 to a string.</li>
+  <li>Convert the string "120px" into a number using parseInt().</li>
+  <li>Convert the string "99.5kg" into a float using parseFloat().</li>
+  <li>Check whether the value "hello" is a number using isNaN().</li>
+  <li>Extract the integer part from 87.653 using any method.</li>
 
-  <li><b>What does trim() do?</b><br>
-      Removes leading and trailing whitespace.
-  </li>
+  <!-- Math Method Tasks -->
+  <li>Generate a random number between 1 and 50.</li>
+  <li>Round the number 6.78 using Math.round(), Math.floor(), and Math.ceil().</li>
+  <li>Find the maximum and minimum value from: 12, 45, 3, 99, 7.</li>
+  <li>Calculate: square root of 256, 3 raised to the power of 4, and absolute value of -123.</li>
+</ol>
 
-  <li><b>How does replace() differ from replaceAll()?</b><br>
-      replace() changes only the first occurrence, while replaceAll() changes all occurrences.
-  </li>
-
-  <li><b>What does split() return?</b><br>
-      It converts a string into an array using the given separator.
-  </li>
-
-  <li><b>What is toUpperCase() used for?</b><br>
-      Converts all characters in a string to uppercase.
-  </li>
-
-  <li><b>How does includes() work?</b><br>
-      Checks if a substring exists inside a string and returns true or false.
-  </li>
-
-  <li><b>What is parseInt() used for?</b><br>
-      Converts a string to an integer, stopping when a non-digit is found.
-  </li>
-
-  <li><b>Difference between parseFloat() and Number()?</b><br>
-      parseFloat() reads decimal values even with text; Number() requires a fully valid number.
-  </li>
-
-  <li><b>What does toFixed() do?</b><br>
-      Formats a number to a fixed number of decimal places.
-  </li>
-
-  <li><b>What is toPrecision() used for?</b><br>
-      Formats a number to a specific number of significant digits.
-  </li>
-
-  <li><b>What is isNaN() used for?</b><br>
-      Checks if the given value is Not-a-Number.
-  </li>
-
-  <li><b>What is Math.random()?</b><br>
-      Generates a random number between 0 and 1.
-  </li>
-
-  <li><b>Difference between Math.floor() and Math.ceil()?</b><br>
-      Math.floor() rounds down; Math.ceil() rounds up.
-  </li>
-
-  <li><b>What does Math.round() do?</b><br>
-      Rounds a number to the nearest integer.
-  </li>
-
-  <li><b>What does Math.max() and Math.min() return?</b><br>
-      They return the highest and lowest values among the given numbers.
-  </li>
-
-  <li><b>What does Math.abs() do?</b><br>
-      Returns the absolute (positive) value of a number.
-  </li>
-
-  <li><b>What is Math.pow(a, b)?</b><br>
-      Calculates a raised to the power b.
-  </li>
-
-  <li><b>Why do we use number conversion methods?</b><br>
-      To ensure values are treated as numbers for accurate calculations.
-  </li>
-
-  <li><b>Why are string methods important?</b><br>
-      They help manipulate, clean, and process text efficiently.
-  </li>
-</ul>
 
     <script>
          let a = "het patel";
@@ -95,8 +42,8 @@
 
 
          console.log(a.length);
-         console.log(a.slice(1,5));
-         console.log(a.substring(1,5));
+         console.log(a.slice());
+         
          
     </script>
 </body>

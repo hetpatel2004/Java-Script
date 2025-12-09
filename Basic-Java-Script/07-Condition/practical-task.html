@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional</title>
+</head>
+
+<body>
+  <ul>
+    <li>Write a program that checks whether a number is positive, negative, or zero.</li>
+
+    <li>Take a number as input and check whether it is even or odd.</li>
+
+    <li>Ask the user for their age and print whether they are eligible to vote (18 or above) or not.</li>
+
+    <li>Compare two numbers and print the greater number.</li>
+
+    <li>
+      Take marks as input and print grades:<br>
+      90–100 → A<br>
+      75–89 → B<br>
+      50–74 → C<br>
+      Below 50 → Fail
+    </li>
+
+    <li>Check whether a given year is a leap year or not.</li>
+
+    <li>
+      Take two numbers and an operator (+, −, *, /).<br>
+      Use switch-case to perform the calculation.
+    </li>
+
+    <li>
+      Take a character input and check if it is:<br>
+      a vowel,<br>
+      a consonant, or<br>
+      not a letter.
+    </li>
+
+    <li>
+      Apply discount based on shopping amount:<br>
+      More than 500 → 20% discount<br>
+      200–500 → 10% discount<br>
+      Below 200 → No discount<br>
+      Print final price after discount.
+    </li>
+
+    <li>
+      Take traffic light input as "red", "yellow", or "green" and display:<br>
+      Red → Stop<br>
+      Yellow → Get Ready<br>
+      Green → Go
+    </li>
+  </ul>
+
+
+  <script>
+    // // q1
+    // let a = prompt("Enter positive or nagitive number");
+    // if (a >= 0) {
+    //     console.log("posative");
+    // }
+    // else{
+    //     console.log("nagetive");
+    // }
+
+    // q2
+    //   let b = prompt("Enter positive or nagitive number");
+    // if (b%2 ==0 ) {
+    //     console.log("Even");
+    // }
+    // else{
+    //     console.log("odd");
+    // }
+
+    // q3
+    //   let age = prompt("Enter your age");
+    // if ( age < 18) {
+    //     console.log("you can't drive");
+    // }
+    // else if (age > 18 ){
+
+    //     console.log("you can drive");
+    // }
+    // else{
+    //     console.log("make your dl and drive");
+    // }
+
+    // Q4
+    //   let num1 = prompt("number 1");
+    //   let num2 = prompt("number 1");
+    // if ( num1>num2) {
+    //     console.log("number one is greater",num1);
+    // }
+
+    // else if (num2>num1){
+
+    //     console.log("number two is gratest",num2);
+    // }
+    // else{
+    //     console.log("both are equal");
+    // }
+
+    // q5
+    //   let marks = prompt("Enter age");
+    // if ( marks<100 && marks>=90) {
+    //     console.log("A");
+    // }
+    // else if ( marks<89 && marks>=75) {
+    //     console.log("B");
+    // }
+    // else if ( marks<74 && marks>=50) {
+    //     console.log("c");
+    // }
+    // else{
+    //     console.log("fail");
+    // }
+
+    // q6
+    //    let year = prompt("Enter age");
+
+    // if ((year % 4 === 0 && year % 100 !== 0)|| (year % 400 === 0)) {
+    //     console.log("leap year");
+    // }
+    // else{
+    //     console.log("not a leep year");
+    // }
+
+    // q7
+    // let choice = parseInt((prompt("press 1 for :- + .\n press 2 for :- - .\n  press 3 for :- * .\n  press 4 for :- / ")));
+    // let num1 = parseInt(prompt("Enter value of Number-1"));
+    // let num2 = parseInt(prompt("Enter value of Number-2"));
+
+    // switch (choice) {
+    //   case (1):
+    //     console.log(num1 + num2);
+    //     break;
+    //   case (2):
+    //     console.log(num1 - num2);
+    //     break;
+    //   case (3):
+    //     console.log(num1 * num2);
+    //     break;
+    //   case (4):
+    //     console.log(num1 / num2);
+    //     break;
+    //   default:
+    //     console.log("select any one of this :- + , - , * , / ");
+    //     break;
+    // }
+
+    // q8
+//     Apply discount based on shopping amount:
+// More than 500 → 20% discount
+// 200–500 → 10% discount
+// Below 200 → No discount
+// Print final price after discount.
+  let price = parseInt(prompt("Enter the total amount to apply discount on it "));
+if (price > 500) {
+
+  console.log(price - 20 /100);
+  console.log(" More than 500 → 20% discount ");
+  
+}
+else if (price<=500 || price>=200){
+console.log( price - 10 /100);
+console.log("200–500 → 10% discount");
+
+}
+else if (price<= 200){
+console.log("No discount");
+}
+else{
+  console.log("Enetr valid price");
+}
+  </script>
+</body>
+
+</html>
