@@ -152,29 +152,81 @@
     // }
 
     // q8
-//     Apply discount based on shopping amount:
-// More than 500 → 20% discount
-// 200–500 → 10% discount
-// Below 200 → No discount
-// Print final price after discount.
-  let price = parseInt(prompt("Enter the total amount to apply discount on it "));
-if (price > 500) {
 
-  console.log(price - 20 /100);
-  console.log(" More than 500 → 20% discount ");
-  
-}
-else if (price<=500 || price>=200){
-console.log( price - 10 /100);
-console.log("200–500 → 10% discount");
+    // let check = prompt("Enter any vovel");
 
-}
-else if (price<= 200){
-console.log("No discount");
-}
-else{
-  console.log("Enetr valid price");
-}
+    // check = check.toLowerCase();
+    // if (check >= "a" && check<= "z") {
+      
+    //   if (check === "u"||check === "a"||check === "e"||check === "i"||check === "o") {
+    //     console.log("Vowel");
+    //   }
+    //   else{
+    //     console.log("consonant");
+    //   }
+    // }
+    // else{
+    //   console.log("not a later");
+      
+    // }
+
+
+
+    // q9
+    //     Apply discount based on shopping amount:
+    // More than 500 → 20% discount
+    // 200–500 → 10% discount
+    // Below 200 → No discount
+    // Print final price after discount.
+    // let price = parseInt(prompt("Enter the total amount to apply discount on it "));
+    // let total;
+    // if (price > 500) {
+
+    //   console.log(" More than 500 → 20% discount ");
+    //   console.log("price before discount:-", price);
+    //   let total = price * 20 / 100;
+    //   console.log("Final price:-", price - total);
+
+
+    // }
+    // else if (price <= 500 && price >= 200) {
+    //   console.log("200–500 → 10% discount");
+    //   console.log("price before discount:-", price);
+    //   let total = price * 10 / 100;
+    //   console.log("Final price:-", price - total);
+
+    // }
+    // else if (price <= 200) {
+    //   console.log("No discount");
+    //   console.log("Final price:-", price);
+
+    // }
+    // else {
+    //   console.log("Enetr valid price");
+    // }
+
+    // q10
+     let light = parseInt(prompt("Enter the colour of  trafic light\n 1:-red\n2:-Yello\n3:-Green"));
+    switch (light) {
+      case (1):
+        console.log("Stop");
+        
+        break;
+      case (2):
+        console.log(" Get Ready");
+        
+        break;
+      case (3):
+        console.log("Go");
+        
+        break;
+    
+      default:
+        console.log("Enter value form this three \n 1:-red\n2:-Yello\n3:-Green ");
+        
+        break;
+    }
+
   </script>
 </body>
 
