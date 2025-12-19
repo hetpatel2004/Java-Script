@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,4 +53,117 @@
         }
     </script>
 </body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater-task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #E30B5C;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .mian-div {
+            /* border: 1px solid; */
+            transition: transform 0.3s ease;
+            border-radius: 20px;
+            margin: 50px 500px 0 550px;
+            padding: 50px;
+            background-color: #DE5D83;
+            height: 500px;
+            width: 500px;
+        }
+        .mian-div:hover{
+                transform: scale(1.1);   /* zoom effect */
+
+        }
+        .sub-div{
+            padding: 20px;
+        }
+        .sub-div button{
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 20px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="heading-tag"> Calculator </span>
+    <div class="mian-div ">
+        <div class="sub-div">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="">
+                <label for="floatingInput">Enter first number for sum:-</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Enter second number for Sum:-</label>
+            </div>
+        </div>
+        <div class="sub-div">
+            <button type="button" class="btn btn-light" id="add" onclick="add()">+</button>
+            <button type="button" class="btn btn-light" id="sub" onclick="sub()">-</button>
+            <button type="button" class="btn btn-light" id="mul" onclick="mul()">*</button>
+            <button type="button" class="btn btn-light" id="dev" onclick="dev()">/</button>
+
+        </div>
+        <div class="sub-div">
+           <div class="form-floating">
+                <input type="text" class="form-control" id="floatingOutput" placeholder="Password">
+                <label for="floatingPassword">Total of two Numbers:-</label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+            let num1 =parseInt(document.getElementById("floatingInput").value);
+            let num2 =parseInt(document.getElementById("floatingPassword").value);
+            // console.log(num1);
+            // console.log(num2);
+            
+            let num3 = num1 + num2;
+            document.getElementById("floatingOutput").value = num3;
+        }
+        function sub() {
+            let num1 =parseInt(document.getElementById("floatingInput").value);
+            let num2 =parseInt(document.getElementById("floatingPassword").value);
+            let num3 = num1 - num2;
+            document.getElementById("floatingOutput").value = num3;
+        }
+        function mul() {
+            let num1 =parseInt(document.getElementById("floatingInput").value);
+            let num2 =parseInt(document.getElementById("floatingPassword").value);
+            let num3 = num1 * num2;
+            document.getElementById("floatingOutput").value = num3;
+        }
+        function dev() {
+            let num1 =parseInt(document.getElementById("floatingInput").value);
+            let num2 =parseInt(document.getElementById("floatingPassword").value);
+            let num3 = num1 / num2;
+            document.getElementById("floatingOutput").value = num3;
+        }
+        let abc = document.getElementById("heading-tag");
+        abc.style.backgroundColor = "#DE5D83";
+        abc.style.Color = "white";
+        abc.style.fontSize = "50px";
+    </script>
+</body>
+
 </html>
