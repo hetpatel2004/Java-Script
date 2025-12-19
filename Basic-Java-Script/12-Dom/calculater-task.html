@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body{
+            /* justify-content: center; */
+            align-items: center;
+            text-align: center;
+        }
+       input{
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid;
+       }
+       button{
+        padding: 20px;
+        border: 2px solid;
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <div>
+                <input type="text" placeholder="Enter number 1" name="" id="number1" >
+            </div>
+            <div>
+                <input type="text" placeholder="Enter number 2" name="" id="number2" >
+            </div>
+            <div>
+                <button>+</button>
+                <button>-</button>
+                <button>*</button>
+                <button>/</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Total-number" name="output" id="output" >
+            </div>
+        </div>
+    </section>
+    <script>
+        function sum() {
+            
+            let num1 = document.getElementById("number1").value;
+            console.log(num1);
+            
+            let num2 = document.getElementById("number2").value;
+            console.log(num2);
+            
+        }
+    </script>
+</body>
+</html>

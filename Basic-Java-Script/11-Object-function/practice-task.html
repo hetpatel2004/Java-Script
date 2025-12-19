@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-function</title>
+</head>
+
+<body>
+    <ol>
+        <li>Get all keys of an object using <code>Object.keys()</code>.</li>
+        <li>Count how many properties are in the object.</li>
+        <li>Loop through the keys and print them.</li>
+        <li>Sort the keys alphabetically.</li>
+        <li>Check if a certain key exists using <code>includes()</code>.</li>
+        <li>Convert all keys to uppercase.</li>
+        <li>Map over keys to create a custom label.</li>
+        <li>Filter keys that start with a specific letter.</li>
+        <li>Join all keys into a single string separated by commas.</li>
+        <li>Get keys from a nested object using recursion.</li>
+
+    </ol>
+    <script>
+        let obj = {name:"het",age:21,login :false}
+        // 1
+        console.log(Object.keys(obj));
+        // 2
+        console.log(Object.entries(obj));
+        // 3
+        for(const key in obj){
+            console.log(obj);
+        }
+        // 4
+        const het = Object.keys(obj).sort
+        console.log(het);
+        // 5
+        console.log(Object.keys(obj).includes("name"));
+        // 6 Convert all keys to uppercase.
+        // console.log(obj.topupercase("name"));
+        // 7 Map over keys to create a custom label.
+
+        
+    </script>
+</body>
+
+</html>
