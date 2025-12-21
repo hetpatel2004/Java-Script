@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-by using Dom in js</title>
+</head>
+<body>
+    <label>Enter a Number to check is it a even Number or odd Number</label> <br>
+    <input type="text" id="usreinput" placeholder="Enter Number here"> <br>
+    <button onclick="condition()"> click me</button> <br>
+    <label for="output">output</label> <br>
+    <input type="text" id="output" placeholder="output"> <br>
+    <script>
+        function condition() {
+        let a = parseInt(document.getElementById("usreinput").value);
+        if (a%2 == 0) {
+            // let abc = console.log("Even");
+            document.getElementById("output").value = "Even";
+        }
+        else{
+            // let abc = console.log("odd");
+            document.getElementById("output").value = "Odd";
+        }
+        } 
+    </script>
+</body>
+</html>
