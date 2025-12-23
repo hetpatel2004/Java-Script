@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-by using Dom in js</title>
+    <title>task-by using Dom in js</title>
+    <style>
+        .onhover-div{
+            height: 200px;
+            width: 200px;
+            border: 2px dotted gray;
+        }
+    </style>
 </head>
-<body>
+
+<body id="bg-change">
+
+    <ol>
+        <li>
+            Create an HTML page with a button.
+            When the button is clicked, change the text of a <code>&lt;p&gt;</code> tag to <b>"Button Clicked!"</b>.
+        </li>
+
+        <li>
+            Create an input field and a button.
+            When the button is clicked, display the input value inside a <code>&lt;div&gt;</code>.
+        </li>
+
+        <li>
+            Create a list (<code>&lt;ul&gt;</code>).
+            Add a new <code>&lt;li&gt;</code> item to the list every time a button is clicked.
+        </li>
+
+        <li>
+            Create a <code>&lt;div&gt;</code> box.
+            When the mouse hovers over the box, change its background color using DOM events.
+        </li>
+
+        <li>
+            Create two buttons <b>Show</b> and <b>Hide</b>.
+            Clicking <b>Show</b> should display an image or text, and clicking <b>Hide</b> should hide it.
+        </li>
+    </ol>
+
+
+    <!-- ----------------------------------------------t1-------------------------------------------------- -->
     <label>Enter a Number to check is it a even Number or odd Number</label> <br>
     <input type="text" id="usreinput" placeholder="Enter Number here"> <br>
     <button onclick="condition()"> click me</button> <br>
     <label for="output">output</label> <br>
-    <input type="text" id="output" placeholder="output"> <br>
+    <input type="text" id="output" placeholder="output"> <br> <br>
+
+    <!-- ----------------------------------------------t2-------------------------------------------------- -->
+    <p id="pera">text before click</p>
+    <label for="input">Enter text to change on click</label>
+    <input type="text" id="input" placeholder="Enter new text">
+    <button onclick="changetext()">click to change text</button> <br> <br>
+    <!-- ----------------------------------------------t3-------------------------------------------------- -->
+    <div class="onhover-div" id="div" onmouseenter="dark()" onmouseout="light()">
+        <p>het</p>
+    </div>
+    <br> <br>
+    <!-- ----------------------------------------------t4-------------------------------------------------- -->
+    
     <script>
+        // -------------------t1--------------------------------------------------------------------------
         function condition() {
-        let a = parseInt(document.getElementById("usreinput").value);
-        if (a%2 == 0) {
-            // let abc = console.log("Even");
-            document.getElementById("output").value = "Even";
+            let a = parseInt(document.getElementById("usreinput").value);
+            if (a % 2 == 0) {
+                // let abc = console.log("Even");
+                document.getElementById("output").value = "Even";
+            }
+            else {
+                // let abc = console.log("odd");
+                document.getElementById("output").value = "Odd";
+            }
         }
-        else{
-            // let abc = console.log("odd");
-            document.getElementById("output").value = "Odd";
+        // -------------------t2--------------------------------------------------------------------------
+        function changetext() {
+            let newtext = document.getElementById("input").value;
+            let text = document.getElementById("pera");
+            text.innerHTML = newtext;
         }
-        } 
+        // -------------------t3--------------------------------------------------------------------------
+        function dark() {
+            let a = document.getElementById("bg-change");
+            a.style.backgroundColor = "black";
+            a.style.color = "white";
+        }
+        function light() {
+            let a = document.getElementById("bg-change");
+            a.style.backgroundColor = "gray";
+            a.style.Color = "black";
+        }
+        // -------------------t4--------------------------------------------------------------------------
     </script>
 </body>
-</html>
+</html> 
