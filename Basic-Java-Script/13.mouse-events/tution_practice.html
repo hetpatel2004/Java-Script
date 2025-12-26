@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <span>hello</span>
+    </div>
+    <hr>
+    <button id = "click">click</button>
+    <button id = "D_click">Double-clicl</button>
+    <button id = "mUP">on-UP-click</button>
+    <button id = "mDOWN">on_down-click</button>
+    <button id = "mOVER">on_mouse-over</button>
+<hr>
+<input type="text" id="input">
+
+    <script>
+        let box = document.getElementById("box");
+
+        click.addEventListener("click", function () {
+            box.style.backgroundColor ="red";
+        });
+        
+        D_click.addEventListener("dblclick", function () {
+            box.style.backgroundColor ="skyblue";
+        } );
+        
+        mUP.addEventListener("mouseup", function () {
+            box.style.backgroundColor = "green";
+        });
+
+        mDOWN.addEventListener("mousedown", function () {
+            box.style.backgroundColor = "pink";
+        });
+
+        mOVER.addEventListener("mouseover",function () {
+            box.style.backgroundColor = "purple";
+        });
+
+
+        // let testing = document.getElementById("input");
+        // input.addEventListener("keypress",function () {
+        //     box.style.backgroundColor = "broun";
+        // });
+
+        input.addEventListener("keyup",function () {
+            box.style.backgroundColor = "skyblue";
+        });
+    </script>
+</body>
+</html>

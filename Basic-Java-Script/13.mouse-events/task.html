@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <style>
+        .box{
+            height: 200px ;
+            width: 200px ;
+            border-radius: 20px;
+            border: 2px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="box" >
+        <p>hello</p>
+    </div>
+    <hr>
+    <button id="colour_changer">abc</button>
+    <script>
+        let a = ["red","skyblue","green","pink","purple","black","white"];
+        let i = 0;
+        colour_changer.addEventListener("click",function () {
+        body.style.backgroundColor = a[i];
+        i++;
+        if(i== a.length){
+            i= 0
+        }
+
+        })
+    </script>
+</body>
+</html>
