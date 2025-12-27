@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>presention practice</title>
+</head>
+<body id = "body">
+    <p id="text">hello</p>
+    <button onclick="abc()">click</button>
+    <button onclick="bgcolour()">click</button>
+    <script>
+        function abc() {
+            let text = document.getElementById("text");
+            text.innerHTML = "Good morning";
+        }
+         function bgcolour() {
+            let text = document.getElementById("body");
+            // text.style.backgroundColor = "red";
+            if(text.style.backgroundColor == "white"){
+                text.style.backgroundColor = "red";
+            }
+            else{
+                text.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+</html>
