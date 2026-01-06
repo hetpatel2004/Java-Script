@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(a);
+        // var a = 10;//undefine because variable is bing declared but not assign value thats why ver is globel scope 
+
+        //console.log(b);
+        // let b = 20; //error 
+
+        // if (true) {
+        //     var x = 5;
+        // }
+        // console.log(x);// will not show error because variablle x is declared in blockes but var is globel scope 
+        // if (true) {
+        //     let x = 5;
+        // }
+        // console.log(x);// will show error because variablle x is declared in blockes
+
+        // function test() {
+        //     var y = 10;
+        // }
+        // test();
+        // console.log(y); // and its function scope so var variable will also not work  
+
+        // let a = 1; // because it is declare in globel scope 
+        // function foo() {
+        //     console.log(a);
+        // }
+        // foo();
+
+        // let x = 10;
+        // function test() {
+        //     let x = 20;
+        //     console.log(x); //it will print value of x which is in blocks or function 
+        // }
+        // test();
+        // console.log(x);// it will print the value which is declared at globel scope 
+
+        // sayHi(); //will run not consurn with where it is called it only checks is the function is created or not 
+        // function sayHi() {
+        //     console.log("Hi");
+        // }
+
+        // sayHello(); //because its anunomas function
+        // var sayHello = function () {
+        //     console.log("Hello");
+        // };
+
+        // {
+        //     console.log(a);
+        //     let a = 10; //it not mater wather it is declared in blocks or not it just acording it's funcnality as like in q2
+        // }
+
+        // doubt
+        // function outer() {
+        //     let count = 0;
+        //     return function () {
+        //         count++;
+        //         return count;
+        //     };
+        // }
+
+        // const fn = outer();
+        // console.log(fn());
+        // console.log(fn());
+
+        // doubt
+        // function makeFn() {
+        //     let x = 1;
+        //     return function () {
+        //         return x++;
+        //     };
+        // }
+
+        // const a = makeFn();
+        // const b = makeFn();
+
+        // console.log(a());
+        // console.log(b());
+
+        // function test() {
+        //     x = 100; // if variable is not declared so it by defolt make it self globel variable 
+        // }
+        // test();
+        // console.log(x);
+
+        // if (true) {
+        //     var a = 10; // it will not work same in let and const it shows error while colling
+        // }
+        // console.log(a); // it works properly it print same value of a 
+
+        // let a = 5; //its a golobel scope and not use in function so its useless 
+        // function test() {
+        //     console.log(a);// shows error because its coll befor it creates in block 
+        //     let a = 10;
+        // }
+        // test();
+
+        // function test() {
+        //     console.log(x); //will show error because varible x is not declared 
+        // }
+        // test();
+    </script>
+</body>
+
+</html>
