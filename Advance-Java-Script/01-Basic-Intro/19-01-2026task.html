@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lecture7</title>
+    </head>
+    <body>
+        <script>
+        // Q1
+        const copy = [1,2,3,4]
+        const updated = [...copy,5];
+        console.log(updated)
+
+        // Q2️
+        const arr1 = [1,2,3]
+        const arr2 = [4,5,6]
+        const merged = [...arr1,...arr2]
+        console.log(merged)
+
+        // Q3️ 
+        function sum(...num) {
+            const su = num.reduce((a,b) => a+b,0);
+            console.log(su)
+            
+        }
+        sum(1,2,3,4,5);
+
+        // Q4️ 
+
+        const user = {
+            name:"abc",
+            age:20
+        };
+        const userUpdate = {
+            ...user,
+            age:25
+        };
+        console.log(userUpdate)
+
+        // 5️ 
+        const user1 = { name: "Jay", age: 25 };
+       const {name,age} = user1
+       console.log(name)
+       console.log(age)
+
+    //    Q6️ 
+    const{name:userName} = user1;
+    console.log(userName)
+
+    // Q7️ 
+    const {role = "IT"} = user1
+    console.log(role)
+
+    // Q8️ 
+    const arr = [10, 20, 30];
+    //error
+
+    // Q9️ 
+    const [ ,secound] = arr;
+    console.log(secound)
+
+    // Q10 
+    let a = 10;
+    let b = 20;
+    [a,b] = [b,a]
+    console.log(a)
+    console.log(b)
+
+    // Q11 
+
+    const user3 = { address: { city: "Delhi" } };
+    const {address:{city}} = user3;
+    console.log(city)
+
+    // Q12️ 
+    function greet({name,age}) {
+        console.log(`Hello ${name}, You are ${age} years`)
+    }
+    greet({name:"aastha",age:20});
+
+    // Q13️ 
+
+    const user4 = { id: 1, name: "Jay", age: 25 };
+    const {id , ...rest} = user4
+    console.log(id)
+    console.log(rest)
+
+    // Q14️ 
+    //Rest Operator
+
+
+    // Q15️
+    // Spread Operator
+        </script>
+    </body>
+</html>
