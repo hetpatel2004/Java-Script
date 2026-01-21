@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nullish Coalescing Optional Chaining</title>
 </head>
+
 <body>
+    <button onclick="fn()" id="btn">abc</button>
     <script>
         // q1
         // let user = null;
         // console.log(user?.address.city);
 
         // q2
-        user?.logout?.();
+        // let abc =user?.logout?.();//doubt
+        // console.log(abc);
+        
+
+        // q3
+        // const theme = settings.theme || "light";//if the value is undefine so it will print "light "
+        // const theme = settings.theme || "light";//if the value is null then to it will print "light "
+
+        // q4
+        // console.log(users[0].name);
+
+        // console.log(users[0]?.name);
+        // console.log(users?.[0]?.name);
+        // let users = []
+        // console.log(users[0]?.name);
+
+        // q5
+        // const title = res.data.post.title;
+        // let res = {}
+        // const title = res?.data?.post?.title;
+        // console.log(title);
+
+        // q6
+        // Which operator avoids overwriting valid falsy values?
+        // Nullish (??)
+
+        // q7
+        // function greet(user) {
+        //     console.log(user?.name);
+        // }
+        // greet()
+
+        // q8
+        // let users ={
+        //     name:null
+        // }
+        // users?.forEach(u => console.log(u?.name));
+        // users.forEach(u => console.log(u?.name));//doubt
+
+        // q9
+        // let config = {
+        //     settings: {
+        //         mode: ""
+        //     }
+        // }
+        // if (config && config.settings && config.settings.mode) {
+        //     mode = config?.settings?.mode;
+        // }
+        // console.log(mode);
+        
+        function fn() {
+        // q10
+        console.log("click");
+        
+            
+        }//doubt
+            document.querySelector("#btn")?.addEventListener("click", fn);
+
+        // q11
+        // let user = {
+        //     profile:role:null
+        // }
+        // const role = user?.profile?.role;
 
     </script>
 </body>
+
 </html>

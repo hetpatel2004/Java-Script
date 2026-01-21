@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local & saction storage </title>
+</head>
+<body>
+    <script>
+        // q1
+        // const isLoggedIn = true;
+        //  localStorage.setItem("isLoggedIn" , "true");
+        // localStorage.clear()
+
+        //q2
+        //  const status = localStorage.getItem("isLoggedIn");
+        // const status = localStorage.getItem(JSON.stringify("isLoggedIn"));
+        // const status = JSON.stringify(localStorage.getItem("isLoggedIn"));
+        // console.log(status);
+        // satisfies(status)
+
+        // q3
+        // const prefs = { lang: "en", theme: "dark" };
+        // localStorage.setItem("lang","en");
+        // localStorage.setItem("theme","dark");//exicute one by one
+
+        //q4
+        // const data = localStorage.getItem("lang");
+        // const data2 = localStorage.getItem("theme");
+        // const data = JSON.stringify( localStorage.getItem("lang"));
+        // const data2 = JSON.stringify( localStorage.getItem("theme"));
+        // console.log(data);
+        // console.log(data2);
+        
+        //q5
+        //  sessionStorage.setItem("OTP",7785);
+        //  const otp = sessionStorage.getItem("OTP")
+        //  console.log(otp);
+         
+        //q6 OTP stored in localStorage. Why is this wrong?
+        // because if we stores it in localStorage so it will keep memory untel we clear it and at the same time sessionStorage keeps otp while closing tab
+        // and otp means one time password so while opening new tab we dont need same otp
+        
+        //q7
+        // sessionStorage.clear("user");
+        // localStorage.clear("user");
+
+        //q8
+        // let update = localStorage.getItem("lang").value = "guj";
+        // localStorage.setItem("lang" ,update) correct 
+        // localStorage.setItem(update)
+
+        //9
+        // localStorage.getItem()
+        // localStorage.setItem()
+        
+        //q10
+        // const cart = [1, 2, 3];
+        // localStorage.setItem(cart)
+
+        //11
+        // doubt
+
+        // 12
+        // doubt
+        
+        //13
+        // localStorage stores data if tabs get closed stil it not get empty so we should store it in to it
+
+        //14
+        // console.log(localStorage.length);
+
+        //15
+        // declare it acording to protocol
+        
+</script>
+</body>
+</html>
