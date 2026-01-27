@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lecture12</title>
+    </head>
+    <body>
+        <script>
+        // Task 1: Create Your First Promise
+
+        // const fatch = new Promise((resolve,reject) =>{
+
+        //     let success = true;
+
+        //     setTimeout(() =>{
+        //         if (success) {
+        //             resolve("Welcome to promises");
+        //         }
+        //         else{
+        //             reject("Error fatching");
+        //         }
+        //     },2000);
+        // });
+
+        // fatch
+        // .then(result => console.log(result))
+        // .catch(error => console.log(error));
+
+
+        // Task 2: Promise Rejection Handling
+
+        // const random = new Promise((resolve,reject) =>{
+        //     let randomData = Math.random() > 0.5;
+
+        //     setTimeout(() =>{
+        //         if (randomData) {
+        //             resolve("Condition Becomes True")
+        //         } else{
+        //             reject("Condition Becomes False");
+        //         }
+        //     } , 2000);
+        // });
+
+        // random
+        // .then(result => console.log(result))
+        // .catch(error => console.log(error));
+
+
+        // Task 3: Promise States Simulation
+
+        // console.log("Promise Is Pending");
+
+        // const random = new Promise((resolve,reject) =>{
+        //     let randomData = Math.random() > 0.5;
+
+        //     setTimeout(() =>{
+        //         if (randomData) {
+        //             resolve("Promise is FullFilled")
+        //         } else{
+        //             reject("Promise is Rejected");
+        //         }
+        //     } , 2000);
+        // });
+
+        //  random
+        // .then(result => console.log(result))
+        // .catch(error => console.log(error));
+
+
+        // Task 4: Simple Fetch API Call
+
+        // fetch("https://jsonplaceholder.typicode.com/users")
+        // .then(response => response.json())
+        // .then((data) => {
+        //     data.forEach(user => {
+        //         console.log(user.name);
+                
+        //     });
+        // })
+        // .catch(error => console.log(error));
+
+
+        // Task 5: Handle Fetch Errors
+
+    //     fetch("https://jsonplaceholder.typicode.com/users")
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP Respense Error ${response.status}`)
+    //         }
+    //         return response.json();
+    //    } )
+    //     .then((data) => {
+    //         data.forEach(user => {
+    //             console.log(user.name);
+                
+    //         });
+    //     })
+    //     .catch(error => console.error(error.message)
+    //     );
+
+
+        // Task 6: Promise Chaining
+        
+      function getUser() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({id:1,name:"abc"});
+                
+            },1000);
+        });
+      }
+
+      function getOrders(userId) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(["oder1","oder2"])
+            },1000);
+        });
+
+      }
+
+      function processOrder(oders) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+
+                resolve(`Processed ${oders.length}  orders`);
+            },1000)
+        });
+      }
+
+      getUser()
+      .then(user => getOrders(user.id))
+      .then(order => processOrder(order))
+      .then(result => console.log(result))
+      .catch(error => console.error(error))
+
+
+
+    //   Task 8: Multiple Fetch Requests
+
+    //  getUser().then(users => console.log(users))
+    //  getOrders().then(order => console.log(order))
+    //  processOrder().then(count => console.log(count))
+
+
+    //  Task 9: Promise.all() Usage
+      Promise.all([getUser(),getOrders(),processOrder()])
+      .then(result => console.log(result))
+      .catch(error => console.error(error)
+      )
+        
+        
+    </script>
+    </body>
+</html>
