@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-Await</title>
+</head>
+
+<body>
+    <script>
+        // Task 1: Convert Promise to Async/Await
+        // async function loadOrders() {
+        //     try {
+        //         const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+        //         const user = await userRes.json();
+        //         console.log(user);}
+        //         catch (error) {
+        //         console.error(error);}
+        // }
+        // loadOrders()
+
+        //Task 2: First Async Function
+
+        // async function greet() {
+        //     return "Hello World";
+        // }
+
+        // greet().then(console.log);
+
+        //Task 3: Sequential Await
+
+        // async function greet() {
+        //     return "Hello World";
+        // }
+        // async function kavy() {
+        //     return "Hello Kavy";
+        // }
+
+        // let a = [greet(),kavy().then(console.log())];
+        // console.log(a);
+
+        //Task 4: Async with setTimeout
+
+        // function dely() {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve();
+        //         }, 2000);
+        //     })
+        // }
+
+        // async function greet() {
+        //     console.log("Start");
+
+        //     await dely();
+
+        //     console.log("End");
+        // }
+
+        // greet()
+
+        //Task 5: Fetch Data Using Async/Await
+
+        // async function loadUser() {
+        //     const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+        //     console.log(userRes);
+        // }
+
+        // loadUser()
+
+        //Task 6: JSON Parsing
+
+        // async function loadUser() {
+        //         const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+        //         const user = await userRes.json();
+        //         console.log(user);
+        // }
+
+        // loadUser()
+
+        //Task 7: Error Handling with try/catch
+
+        // async function loadUser() {
+
+        //     try {
+        //         const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+        //         const user = await userRes.json();
+        //         console.log(user);
+
+
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // }
+
+        // loadUser();
+
+        //Task 8: Parallel API Calls
+
+        // async function loadOrders() {
+        //     try {
+        //         const [userRes, orderRes] = await Promise.all([
+        //             fetch("https://jsonplaceholder.typicode.com/users"),
+        //             fetch("https://fakestoreapi.com/products")
+        //         ])
+
+        //         const users = await userRes.json();
+        //         const orders = await orderRes.json();
+
+        //         console.log(users);
+        //         console.log(orders);
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // }
+
+
+        // loadOrders();
+
+        //Task 9: Optional API Handling
+
+        // async function loadOrders() {
+        //     try {
+        //         const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+        //         const user = await userRes.json();
+
+        //         let orders = [];
+
+        //         try {
+        //             const orderRes = await fetch("https://fakestoreapi.com/product");
+        //             orders = await orderRes.json();
+        //         }catch(error){
+        //             console.log("Optional orders API failed, continuing without orders");
+        //         }
+
+        //         console.log(user);
+        //         console.log(orders);
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // }
+
+
+        // loadOrders()
+
+        //Task 10: Async Function Reusability
+
+        // async function fetchWithTimeout(url, ms) {
+        //     return Promise.race([
+        //         fetch(url),
+        //         new Promise((_, reject) =>
+        //             setTimeout(() => reject("Timeout"), ms)
+        //         )
+        //     ]);
+        // }
+
+        // async function run() {
+        //     try {
+        //         const res = await fetchWithTimeout("https://fakestoreapi.com/products", 2000);
+        //         const data = await res.json();
+        //         console.log(data);
+        //     } catch (error) {
+        //         console.error("Error:", error);
+        //     }
+        // }
+
+
+        // run();
+
+        //Task 11: Async vs Promise Chaining
+
+        // const fetchData = new Promise((resolve, reject) => {
+        //     let success = true;
+
+        //     setTimeout(() => {
+        //         if (success) {
+        //             fetch("https://jsonplaceholder.typicode.com/users")
+        //                 .then(response => resolve(response))
+        //                 .catch(err => reject(err));
+        //         } else {
+        //             reject("Failed to start fetch");
+        //         }
+        //     }, 2000);
+        // });
+
+        // fetchData
+        //     .then(response => response.json()) 
+        //     .then(data => {
+        //         console.log(data);
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //     });
+
+
+        // async function loadOrders() {
+        //     try {
+        //         const userRes = await fetch("https://jsonplaceholder.typicode.com/users");
+        //         const user = await userRes.json();
+
+        //         console.log(user);
+        //     } catch (error) {
+        //         console.error(error);
+        //     }
+        // }
+
+        // loadOrders();
+
+
+        //Task 12: Conditional Async Logic
+
+        // async function fetchUsers() {
+        //     try {
+        //         const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        //         if (!res.ok) {
+        //             throw new Error("Failed to fetch users");
+        //         }
+
+        //         const users = await res.json();
+        //         console.log(users);
+                
+        //     } catch (err) {
+        //         console.error(err.message);
+        //     }
+        // }
+
+        // fetchUsers();
+
+        //Task 13: Handling API Timeouts
+
+        
+
+    </script>
+</body>
+
+</html>
