@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Call Back </title>
 </head>
+
 <body>
     <script>
-        
+        // function first(name) {
+        //     console.log("hello",name);
+        // }
+        // function second(abc) {
+        //     abc("het");
+        // }
+        // second(first);
+
+
+        // function greet(name, callback) {
+        //     callback(name);
+        // }
+
+        // greet("Het", (name)=> {
+        //     console.log("Hello " + name);
+        // });
+
+
+
+        // function practice(name ,last_name,call) {
+        //     call(name,last_name)
+        // }
+        // practice("het","patel",(name ,last_name)=>{
+        //     console.log(name + last_name);
+            
+        // })
+
+
+
+          function practice(name ,last_name,call) {
+            call(name,last_name,()=>{
+                console.log("Hello mr xyz");
+                
+            })
+        }
+        practice("het","patel",(name ,last_name ,fun)=>{
+            console.log(name + last_name ,fun);
+            
+        })
     </script>
 </body>
+
 </html>

@@ -8,20 +8,26 @@
 <body>
     <script>
 
-        const tasting = new Promise((a,b)=> {
-            let succ = true;
+        // const tasting = new Promise((a,b)=> {
+        //     let succ = true;
             
-            setTimeout(() => {
-                if (succ) {
-                    console.log("data fatch succes");
-                } else {
-                    console.log("error");
-                }
-            }, 2000);
-        });
-        tasting
-        .then(succes => console.log(succes))
-        .catch(succes => console.log(succes));
+        //     setTimeout(() => {
+        //         if (succ) {
+        //             console.log("data fatch succes");
+        //         } else {
+        //             console.log("error");
+        //         }
+        //     }, 2000);
+        // });
+        // tasting
+        // .then(succes => console.log(succes))
+        // .catch(succes => console.log(succes));
+
+
+        fetch("https://697865aecd4fe130e3d8baf1.mockapi.io/het")
+        .then(respince => respince.json())
+        .then(data=> console.log(data))
+        .catch(error => console.error());
     </script>
 </body>
 </html>

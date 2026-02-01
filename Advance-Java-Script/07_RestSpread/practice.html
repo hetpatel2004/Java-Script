@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let arr = [1,2,4,3,5,6,7,8,9,10];
-        // function het(a) {
-            console.log(...arr); //rest 
-            let [a,b] = het ;
-            // console.log(het);
-            
-        // }
-        // het(arr);
-    </script>
+
+        // spread in array 
+        let name1 = ["h", "e", "t"];
+        let name = "Het patel";
+        console.log(...name1);
+        console.log(...name);
+
+        let arr = [1, 2, 4, 3, 5, 6, 7, 8, 9, 10];
+        let arr2 = [11, 21, 41, 31, 51, 61, 71, 81, 91, 110];
+        console.log(...arr, ...arr2, 77); // will add two array in one array and will add the value given in the last 77 it the end of new arreay 
+
+
+        // spread in object 
+        let obj = { name: "Het", age: 21, last_name: "patel" };
+        let copy = { ...obj };
+        console.log(copy);
+        let update = { ...obj, age: 22 };
+        console.log(update);
+
+        const a = { x: 1 };
+        const b = { y: 2 };
+        const merged = { ...a, ...b };
+        console.log(merged);
+
+
+        //destructuring 
+        // let [c,d] = arr;
+        // console.log(c , d); 
+        let [c,...d] = arr;
+        console.log(c , d); 
+        </script>
 </body>
+
 </html>
