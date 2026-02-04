@@ -1,64 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closures function </title>
 </head>
+
 <body>
     <script>
 
         // 1
-// Create a function outer() that:
-// Defines a variable count
-// Returns an inner() function
-// Calling inner() should increment and log count
+        // Create a function outer() that:
+        // Defines a variable count
+        // Returns an inner() function
+        // Calling inner() should increment and log count
 
-// function outer() {
-//     let count = 0;
-//      function inner() {
-//         count++
-//          console.log(count);
-//     }
-//     return inner;
-// }
-// const print = outer()
-// print();
+        // function outer() {
+        //     let count = 0;
+        //      function inner() {
+        //         count++
+        //          console.log(count);
+        //     }
+        //     return inner;
+        // }
+        // const print = outer()
+        // print();
 
 
-// 2
-// Parent function defines message
-// Child function prints the message
-// Return and call the child function outside
+        // 2
+        // Parent function defines message
+        // Child function prints the message
+        // Return and call the child function outside
 
-// function one() {
-//     let message = "hello its me het";
-//     function child() {
-//         console.log(message);
-//     }
-//     return child
-// }
-// let result = one();
-// result();
+        // function one() {
+        //     let message = "hello its me het";
+        //     function child() {
+        //         console.log(message);
+        //     }
+        //     return child
+        // }
+        // let result = one();
+        // result();
 
-// 3
-// Create a closure and call it 3 times.
-// Verify that the variable value persists across calls.
+        // 3
+        // Create a closure and call it 3 times.
+        // Verify that the variable value persists across calls.
 
-// function outer() {
-//     let count = 0;
-//      function inner() {
-//         count++
-//          console.log(count);
-//     }
-//     return inner;
-// }
-// const print = outer()
-// print();
-// print();
-// print();
+        // function outer() {
+        //     let count = 0;
+        //      function inner() {
+        //         count++
+        //          console.log(count);
+        //     }
+        //     return inner;
+        // }
+        // const print = outer()
+        // print();
+        // print();
+        // print();
 
-// 4
+        // 4
+        // function exa() {
+        //   let count = 0; // private state
+
+        //   return function () {
+        //     count++;
+        //     console.log(count);
+        //   };
+        // }
+
+        // const A = exa();
+        // const B = exa();
+        // A();
+        // A();
+        // B();
+        // B();
+
+        // 5
+        //         let a = "globel scope";
+        //         function test() {
+        //             let b = "laxical scope";
+        //             function inner() {
+        //                 console.log(a);
+        //                 console.log(b);
+        //             }
+        //             return inner
+        //         }
+        // let fun_1 = test();
+        // fun_1();
+
+        //6
+        // function createEmployee() {
+        //     let salary = 0;
+
+        //     return {
+        //         getSalary: function () {
+        //             return salary;
+        //         },
+        //         setSalary: function (newSalary) {
+        //             salary = newSalary;
+        //         }
+        //     };
+        // }
+        // const emp = createEmployee();
+
+        // emp.setSalary(50000);
+        // console.log(emp.getSalary());
+
+        //7
+        // for (var i = 1; i <= 5; i++) {
+        //     setTimeout(function () {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+
+        //8
+        // for (let i = 1; i <= 5; i++) {
+        //     setTimeout(function () {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+
+        // 9
+        // function one(num1) {
+        //     return function two(num2) {
+        //         return num1 * num2;
+        //     };
+        // };
+        // let a = one();
+        // let b = two();
+
+        // 10
+        // function createLogger(config) {
+        //     return function () {
+        //         console.log("App Name:", config.appName);
+        //         console.log("Environment:", config.env);
+        //         console.log("Version:", config.version);
+        //     };
+        // }
+        // const appConfig = {
+        //     appName: "MyApp",
+        //     env: "development",
+        //     version: "1.0.0"
+        // };
+        // const logConfig = createLogger(appConfig);
+        // logConfig();
+
     </script>
 </body>
+
 </html>
