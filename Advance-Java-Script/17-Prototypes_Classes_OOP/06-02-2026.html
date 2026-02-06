@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+
+<body>
+    <script>
+        // // 1
+        // let animal = {
+        //     eat(){
+        //         console.log("element eat");
+        //     }
+        // }
+        // let dog ={
+
+        // }
+        // dog.__proto__ = animal;
+        // dog.eat();
+
+        // 2
+        // let vehicle = {
+        //     wheels:4
+        // }
+        // let bike = {}
+        // bike.__proto__ =vehicle
+        // console.log(bike.wheels);
+
+        // 3
+        // let parent = {
+        //     last_name : "patel"
+        // }
+        // let child = {}
+        // child.__proto__ = parent;
+        // console.log(child.last_name);
+
+
+        // 4
+        // function user(name) {
+        //     this.name = name ;
+        // }
+        // user.prototype.login = function() {
+        //     console.log(`${this.name} succesfully Login`);
+        // }
+        // let user1 = new user("het");
+        // let user2 = new user("patel");
+
+        // user1.login();
+        // user2.login();
+
+        // 5
+        // class person {
+        //     greet() {
+        //         console.log("hello good morning");
+        //     }
+        // }
+        // let obj1 = new person;
+        // let obj2 = new person;
+
+        // obj1.greet()
+        // obj2.greet()
+
+        // 6
+        //class Person {
+        //greet(){
+        //console.log("Hello, Nice to meet you!");    
+        //}
+        //}
+        //const p1 = new Person()
+        //const p2 = new Person()
+        //p1.greet()
+        //p2.greet()
+        //console.log( p1.greet === p2.greet);  
+
+        // 7
+        // const accouuntProto = {
+        //     balance: 100000,
+        //     getBalance() {
+        //         return this.balance
+
+        //     }
+        // }
+
+        // const acc1 = Object.create(accouuntProto);
+        // const acc2 = Object.create(accouuntProto)
+        // console.log(acc1.getBalance());
+        // console.log(acc2.getBalance());
+
+        // 8
+        // const user = {
+        //     role: "User"
+        // }
+        // const admin = {}
+        // admin._proto_ = user
+        // console.log(admin.role);
+
+        // 9
+        // class Car {
+        //drive() {
+        //console.log("Driving...");
+        //}
+        // }
+        // const car1 = new Car()
+        // car1.drive()
+        // console.log(car1._proto_ === Car.prototype);
+
+
+    </script>
+</body>
+
+</html>
