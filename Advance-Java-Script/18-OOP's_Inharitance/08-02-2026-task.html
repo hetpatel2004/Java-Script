@@ -170,7 +170,170 @@
         // BaseService.js
         // OrderService.js
         // ✔ Import and extend base class properly.
-        
+        // index.js
+        // import OrderService from "./OrderService.js";
+        // const orderService = new OrderService();
+        // orderService.createOrder(101);
+
+        // 10
+        // Create a base class Employee with getSalary().
+        // Override it in Manager, but include base salary using super.
+        // ✔ Demonstrate salary calculation.
+        // class employee {
+        //     constructor(salary) {
+
+        //         this.salary = salary
+        //     }
+        //     getsalary() {
+        //         return this.salary
+        //     }
+        // }
+        // class manager extends employee {
+        //     constructor(salary, bonus) {
+        //         super(salary);
+        //         this.bonus = bonus
+        //     }
+        //     getsalary() {
+        //         return super.getsalary() + this.bonus;
+        //     }
+        // }
+        // let person = new manager(10000, 5000);
+        // console.log(person.getsalary());
+
+        // 11
+        // Create a User class with login() method.
+        // Extend it into Admin and Customer.
+        // ✔ Add role-specific methods.
+        // class User {
+        //     constructor(username) {
+        //         this.username = username;
+        //     }
+
+        //     login() {
+        //         console.log(`${this.username} logged in.`);
+        //     }
+        // }
+        // class Admin extends User {
+        //     deleteUser(user) {
+        //         console.log(`Admin ${this.username} deleted user: ${user}`);
+        //     }
+        // }
+        // class Customer extends User {
+        //     order(product) {
+        //         console.log(`Admin ${this.username} deleted user: ${product}`);
+        //     }
+        // }
+
+        // let admin1 = new Admin("het");
+        // admin1.login();
+        // admin1.deleteUser("abc");
+
+        // let Customer1 = new Customer();
+        // Customer1.login()
+        // Customer1.order("tab")
+
+        // 12
+        // Create a base Component class with render().
+        // Extend it into Button and Modal.
+        // ✔ Override render behavior.
+        // class Component {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+
+        //     render() {
+        //         console.log("Rendering component...");
+        //     }
+        // }
+        // class Button extends Component {
+        //     constructor(name, color) {
+        //         super(name);
+        //         this.color = color;
+        //     }
+
+        //     render() {
+        //         console.log(`Rendering Button: ${this.name} with color ${this.color}`);
+        //     }
+        // }
+        // class Modal extends Component {
+        //     constructor(name, size) {
+        //         super(name);
+        //         this.size = size;
+        //     }
+
+        //     render() {
+        //         console.log(`Rendering Modal: ${this.name} with size ${this.size}`);
+        //     }
+        // }
+        // const btn = new Button("Submit", "blue");
+        // btn.render();
+        // const modal = new Modal("Login Modal", "large");
+        // modal.render();
+
+        // 13
+        // Create parent and child classes with the same property name.
+        // ✔ Show which value takes priority and why.
+        // class Parent {
+        //     constructor() {
+        //         this.name = "Parent Name";
+        //     }
+        // }
+
+        // class Child extends Parent {
+        //     constructor() {
+        //         super();
+        //         this.name = "Child Name";  // Same property name
+        //     }
+        // }
+
+        // const obj = new Child();
+        // console.log(obj.name);
+
+        // 14
+        // Create a 3-level inheritance chain.
+        // Refactor it to reduce depth using better design.
+        // ✔ Explain why shallow hierarchies are preferred.
+        // class Animal {
+        //     eat() {
+        //         console.log("Eating...");
+        //     }
+        // }
+        // const walker = {
+        //     walk() {
+        //         console.log("Walking...");
+        //     }
+        // };
+        // const barker = {
+        //     bark() {
+        //         console.log("Barking...");
+        //     }
+        // };
+        // class Dog extends Animal { }
+        // Object.assign(Dog.prototype, walker, barker);
+        // const d = new Dog();
+        // d.eat();
+        // d.walk();
+        // d.bark();
+
+        // 15
+        // Inspect and log:
+        // instance
+        // constructor prototype
+        // Object.prototype
+        // ✔ Draw the prototype chain flow.
+        // class Person {
+        //     greet() {
+        //         console.log("Hello");
+        //     }
+        // }
+        // const p = new Person();
+        // console.log(p);
+        // console.log(Person.prototype);
+        // console.log(Object.prototype);
+        // console.log(p.__proto__ === Person.prototype);
+        // console.log(Person.prototype.__proto__ === Object.prototype);
+        // console.log(Object.prototype.__proto__);
+
     </script>
 </body>
 
