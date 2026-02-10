@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .container {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .contant_div {
+            height: 40%;
+            width: 20%;
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="contant_div">
+
+            <div class="card" style="width: 18rem;">
+                <img src="./images/download (1).jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        cards content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        cards content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./images/download.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        cards content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <button onclick="previous()">previous</button>
+        <button onclick="next()">next</button>
+    </section>
+    <script>
+        let cards = document.getElementsByClassName("card");
+        let count = 0;
+
+        function logic() {
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+            }
+        }
+        function show() {
+            logic();
+            cards[count].style.display = "block";            
+        }
+        function next(){
+            count++
+            if (count >= cards.length) {
+               count = 0  
+            }
+            show()
+        }
+        function previous(){
+            count--
+            if (count < 0 ) {
+                count = cards.length-1
+            }
+            show();
+            
+        }
+        show();
+        
+
+    </script>
+</body>
+
+</html>

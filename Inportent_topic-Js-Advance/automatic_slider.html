@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic-Slider</title>
+    <style>
+        .container {
+            /* height: 500px; */
+            width: 1200px;
+            margin: 0 auto;
+            /* align-items: center;
+        text-align: center;
+        justify-content: center; */
+        }
+
+        .d-flex {
+            display: flex;
+            
+        }
+        .card{
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            width: 1200px;
+        }
+
+        .card img {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="d-flex">
+            <div class="card">
+                <img src="./images/download.jpg" alt="" class="image">
+            </div>
+            <div class="card">
+                <img src="./images/download (1).jpg" alt="" class="image">
+            </div>
+            <div class="card">
+                <img src="./images/download (2).jpg" alt="" class="image">
+            </div>
+            <div class="card">
+                <img src="./images/download (1).jpg" alt="" class="image">
+            </div>
+        </div>
+        <button onclick="next()">next</button>
+        <button onclick="previous()">previous</button>
+    </section>
+    <script>
+        let content = document.getElementsByClassName("image");
+        let count = 0;
+        function block() {
+            for (let i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+        }
+       function show() {
+        block();
+        content[count].style.display= "block";
+       }
+       setInterval(() => {
+        next()
+       }, 2000);
+
+       function next() {
+           count++
+           if (count >= content.length){
+               count = 0 
+            }
+            show()
+       }
+       function previous() {
+           count--
+           if(count < 0 ){
+               count = content.length-1
+            }
+            show()
+       }
+       show();
+    </script>
+</body>
+
+</html>
