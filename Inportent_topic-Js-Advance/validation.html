@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 350px;
+            margin: 80px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            border-color: blue;
+            outline: none;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        form span {
+            color: red;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Register Form</h2>
+
+        <form>
+            <input type="text" placeholder="Full Name" id="u_name"><span class="error"></span>
+
+            <input type="email" placeholder="Email Address" id="u_email"><span class="error"></span>
+
+            <input type="password" placeholder="Password" id="u_pass"><span class="error"></span>
+
+            <!-- <input type="tel" placeholder="Phone (10 digits)" id="u-phoneno"><span class="error"></span> -->
+
+            <button type="submit" onclick="submit()">Submit</button>
+        </form>
+    </div>
+    <script>
+        let u_name = document.getElementById("u_name");
+        let u_email = document.getElementById("u_email");
+        let u_pass = document.getElementById("u_pass");
+        // let u_phoneno = document.getElementById("u-phoneno");
+        let print_error = document.getElementsByClassName("error")
+        let ragex = /^\S+@\S+\.\S+$/;
+        function submit() {
+            let isValid = true
+            if (u_name.value == "") {
+                // u_name.innerText = required
+                // print_error.innerText = "username is mendatory";
+                // isValid=false
+                alert("username is mendatory");
+            }
+            else if (!ragex.test(u_email.value)) {
+                // u_email.innerText = required;
+                // let print_error = document.getElementsByClassName("error[1]")
+                // print_error.innerText = "email is mendatory and in proper formate";
+                // isValid=false
+                alert("email is mendatory and in proper formate");
+            }
+            else if (u_pass.value == "" && u_pass.value <= 6) {
+                // u_pass.innerText = required
+                // let print_error = document.getElementsByClassName("error[2]")
+                // print_error.innerText = "password is mendatory and must be attlist 6 ";
+                // isValid=false
+                alert("password is mendatory and must be attlist 6");
+            }
+        }
+
+            document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            submit()
+        });
+
+
+    </script>
+</body>
+
+</html>

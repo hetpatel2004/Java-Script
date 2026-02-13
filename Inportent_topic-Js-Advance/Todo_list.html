@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        section {
+            height: 600px;
+            width: 1200px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+
+        .div1 {
+            height: 80%;
+            width: 50%;
+            border-radius: 30px;
+            background-color: gray;
+            display: flex;
+            /* align-items: center; */
+            text-align: center;
+            justify-content: center;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="div1">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <div class="d-flex">
+                    <input type="email" class="form-control" id="xyz" placeholder="Enter your name"
+                        aria-describedby="emailHelp">
+                    <button type="button" class="btn btn-light" onclick="add()">Light</button>
+                </div>
+                <ul id="ul">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        let u_name = document.getElementById("xyz");
+        console.log(u_name);
+        
+        let ul = document.getElementById("ul");
+
+        function add() {
+            let name = u_name.value.trim()
+            
+            if (name === "") {
+                alert("first Entar you name hear");
+                return;
+            }
+            const li = document.createElement("li")
+            
+            li.textContent = name
+            ul.appendChild(li);
+            let del = document.createElement("button")
+            del.textContent = "delete";
+            del.onclick = ()=>{
+                li.remove()
+            };
+            li.appendChild(del);
+        }
+    </script>
+</body>
+
+</html>
