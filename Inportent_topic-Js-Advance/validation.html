@@ -81,41 +81,6 @@
         </form>
     </div>
     <script>
-        let u_name = document.getElementById("u_name");
-        let u_email = document.getElementById("u_email");
-        let u_pass = document.getElementById("u_pass");
-        // let u_phoneno = document.getElementById("u-phoneno");
-        let print_error = document.getElementsByClassName("error")
-        let ragex = /^\S+@\S+\.\S+$/;
-        function submit() {
-            let isValid = true
-            if (u_name.value == "") {
-                // u_name.innerText = required
-                // print_error.innerText = "username is mendatory";
-                // isValid=false
-                alert("username is mendatory");
-            }
-            else if (!ragex.test(u_email.value)) {
-                // u_email.innerText = required;
-                // let print_error = document.getElementsByClassName("error[1]")
-                // print_error.innerText = "email is mendatory and in proper formate";
-                // isValid=false
-                alert("email is mendatory and in proper formate");
-            }
-            else if (u_pass.value == "" && u_pass.value <= 6) {
-                // u_pass.innerText = required
-                // let print_error = document.getElementsByClassName("error[2]")
-                // print_error.innerText = "password is mendatory and must be attlist 6 ";
-                // isValid=false
-                alert("password is mendatory and must be attlist 6");
-            }
-        }
-
-            document.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault();
-            submit()
-        });
-
 
     </script>
 </body>

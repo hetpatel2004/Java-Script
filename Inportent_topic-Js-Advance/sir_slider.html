@@ -68,20 +68,15 @@
         <div class="slideshow-container">
           <div class="slider-track">
             <div class="slide">
-              <img src="./asseset/images/Iamge_2.jpg" />
+              <img src="./images/download.jpg" />
             </div>
             <div class="slide">
-              <img src="./asseset/images/Iamge_3.jpg" />
+              <img src="./images/download (1).jpg" />
             </div>
             <div class="slide">
-              <img src="./asseset/images/image_1.jpg" />
+              <img src="./images/download (2).jpg" />
             </div>
-            <div class="slide">
-              <img src="./asseset/images/Image_5.jpg" />
-            </div>
-            <div class="slide">
-              <img src="./asseset/images/img.jpg" />
-            </div>
+           
           </div>
         </div>
 
@@ -101,12 +96,10 @@
           function updateSlide() {
             track.style.transform = `translateX(-${index * 100}%)`;
           }
-
           function nextSlide() {
             index++;
             if (index >= totalSlides) {
               index = 0;
-              track.style.transition = "none";
               updateSlide();
               requestAnimationFrame(() => {
                 track.style.transition = "transform 0.6s ease-in-out";

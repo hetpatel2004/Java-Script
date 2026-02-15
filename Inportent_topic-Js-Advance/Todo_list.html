@@ -63,27 +63,46 @@
     </section>
     <script>
         let u_name = document.getElementById("xyz");
-        console.log(u_name);
-        
+        // console.log(u_name);
+
         let ul = document.getElementById("ul");
 
         function add() {
             let name = u_name.value.trim()
-            
+
             if (name === "") {
                 alert("first Entar you name hear");
                 return;
             }
             const li = document.createElement("li")
-            
+
             li.textContent = name
             ul.appendChild(li);
             let del = document.createElement("button")
             del.textContent = "delete";
-            del.onclick = ()=>{
+            del.onclick = () => {
                 li.remove()
             };
             li.appendChild(del);
+
+            let edit = document.createElement("button");
+            edit.textContent = "Edite";
+            li.appendChild(edit);
+            // edit.onclick = () => {
+            // let replaced = document.createElement("input");
+            // let conform = confirm("Do you realy want to edit the data:-");
+            // let abc = prompt("Enter the Edited value:-"); 
+            // li.appendChild(abc);//or              
+            // li.replace(abc);
+            // }
+
+            edit.onclick = () => {
+                let abc = prompt("Enter the Edited value:-", name);
+
+                if (abc !== null && abc.trim() !== "") {
+                    li.firstChild.nodeValue = abc + " ";
+                }
+            };
         }
     </script>
 </body>
