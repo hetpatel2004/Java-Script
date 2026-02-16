@@ -53,7 +53,7 @@
                 <div class="d-flex">
                     <input type="email" class="form-control" id="xyz" placeholder="Enter your name"
                         aria-describedby="emailHelp">
-                    <button type="button" class="btn btn-light" onclick="add()">Light</button>
+                    <button type="button" class="btn btn-light" onclick="add()">Submit</button>
                 </div>
                 <ul id="ul">
 
@@ -86,8 +86,12 @@
             li.appendChild(del);
 
             let edit = document.createElement("button");
-            edit.textContent = "Edite";
+            edit.innerText = "Edite";
+            edit.onclick = ()=>{
+                update(span, edit);
+            }
             li.appendChild(edit);
+            
             // edit.onclick = () => {
             // let replaced = document.createElement("input");
             // let conform = confirm("Do you realy want to edit the data:-");
@@ -96,13 +100,11 @@
             // li.replace(abc);
             // }
 
-            edit.onclick = () => {
-                let abc = prompt("Enter the Edited value:-", name);
-
-                if (abc !== null && abc.trim() !== "") {
-                    li.firstChild.nodeValue = abc + " ";
-                }
-            };
+            function update(par1,par2) {
+                let input = document.createElement("input");
+                input.type = "text";
+                input.value = par1.innerText;
+            }
         }
     </script>
 </body>

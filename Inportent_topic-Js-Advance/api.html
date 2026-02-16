@@ -56,7 +56,6 @@
                 }
                 let data = await abc.json();
                 // console.log(data);
-
                 let tbody = document.querySelector(".tcontent ");
                 data.forEach(user => {
                     let row = document.createElement("tr");
@@ -66,8 +65,7 @@
                     <td>${user.number}</td>
                     <td>${user.id}</td>
                     <td><button class="delete" onclick = "del()">Delete</button></td>
-                    <td><button class="edit" onclick = "edi()">edit</button></td>
-                    `
+                    <td><button class="edit" onclick = "edi()">edit</button></td>`
                     tbody.appendChild(row);
                 });
                 function del(){
@@ -81,8 +79,7 @@
                             <td>${user.number}</td>
                             <td>${user.id}</td>
                             <td><button class="delete" onclick = "del()">Delete</button></td>
-                            <td><button class="edit" onclick = "edi()">edit</button></td>
-                            `
+                            <td><button class="edit" onclick = "edi()">edit</button></td>`
                      tbody.remove(row);
                         }
                     });

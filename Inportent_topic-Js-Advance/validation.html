@@ -2,87 +2,127 @@
 <html>
 
 <head>
-    <title>Form Validation</title>
+    <title>Simple Register Form</title>
     <style>
         body {
             font-family: Arial;
-            background-color: #f4f4f4;
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .container {
-            width: 350px;
-            margin: 80px auto;
-            background: white;
+        form {
+            width: 320px;
+            background: #1e1e1e;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 8px gray;
-        }
-
-        h2 {
-            text-align: center;
         }
 
         input {
             width: 100%;
             padding: 8px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            margin-bottom: 5px;
+            border: 2px solid #444;
+            border-radius: 5px;
         }
 
-        input:focus {
-            border-color: blue;
-            outline: none;
-        }
-
-        input:invalid {
-            border-color: red;
-        }
-
-        input:valid {
-            border-color: green;
-        }
-
-        form span {
+        small {
             color: red;
+            font-size: 12px;
+            height: 14px;
+            display: block;
+            margin-bottom: 10px;
         }
 
         button {
             width: 100%;
             padding: 10px;
-            background: blue;
-            color: white;
+            background: #4caf50;
             border: none;
-            border-radius: 4px;
+            color: white;
+            border-radius: 5px;
             cursor: pointer;
-        }
-
-        button:hover {
-            background: darkblue;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h2>Register Form</h2>
+    <form id="form">
+        <h2>Register</h2>
 
-        <form>
-            <input type="text" placeholder="Full Name" id="u_name"><span class="error"></span>
+        <input type="text" id="username" placeholder="Username">
+        <small></small>
 
-            <input type="email" placeholder="Email Address" id="u_email"><span class="error"></span>
+        <input type="email" id="email" placeholder="Email">
+        <small></small>
 
-            <input type="password" placeholder="Password" id="u_pass"><span class="error"></span>
+        <input type="password" id="password" placeholder="Password">
+        <small></small>
 
-            <!-- <input type="tel" placeholder="Phone (10 digits)" id="u-phoneno"><span class="error"></span> -->
+        <input type="password" id="confirm" placeholder="Confirm Password">
+        <small></small>
 
-            <button type="submit" onclick="submit()">Submit</button>
-        </form>
-    </div>
+        <button type="submit">Submit</button>
+    </form>
+
     <script>
+        let for_data = document.getElementById("form");
 
+        for_data.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const username = document.getElementById("username");
+            const email = document.getElementById("email");
+            const password = document.getElementById("password");
+            const confirm = document.getElementById("confirm");
+
+            let valid = true
+
+            if (username.value.trim() === "") {
+                error_print(username, "Name is mandatory");
+                valid = false;
+            } else {
+                success(username)
+            };
+            if (/^\S+@\S+\.\S+$/.test(email.value)) {
+                success(email);
+            } else {
+                error_print(email, "enter valid email")
+                valid = false;
+            }
+            if (password.value.length >= 6) {
+                success(password);
+            } else {
+                error_print(password, "password must me more then 6 degit");
+                valid = false;
+            }
+            if (confirm.value !== password.value && confirm.value == null) {
+                error_print(confirm, "not matchis password");
+                valid = false;
+            } else {
+                success(confirm);
+            }
+
+            if (valid) {
+                alert("Form Submitted!");
+                for_data.reset();
+            }
+
+            function error_print(varib, message) {
+                varib.nextElementSibling.innerText = message
+                varib.style.borderColor = "red";
+                // varib.style.color = "red";
+            }
+            function success(varib) {
+                varib.nextElementSibling.innerText = ""
+                varib, style.borderColor = "green";
+            }
+        })
     </script>
-</body>
 
+</body>
 </html>
