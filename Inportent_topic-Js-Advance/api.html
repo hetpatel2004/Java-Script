@@ -15,7 +15,6 @@
             border-collapse: collapse;
             background: white;
         }
-
         th,
         td {
             padding: 10px;
@@ -46,50 +45,148 @@
         </tbody>
     </table>
     <script>
-        async function get_api() {
-            try {
-                let abc = await fetch("https://697865aecd4fe130e3d8baf1.mockapi.io/het");
-                // console.log(abc);
+       let abc = "https://697865aecd4fe130e3d8baf1.mockapi.io/het";
+        // console.log(abc);
+       async function getApi(callbackfunction) {
+        // alert("called")
+            const res = await fetch(abc);
+            const data = await res.json();
+            console.log(data);
+            await callbackfunction(data)
+        }
+        function showData(datarec) {
+    const tbody = document.querySelector(".tcontent");
+    const allRows = [];
 
-                if (!abc.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                let data = await abc.json();
-                // console.log(data);
-                let tbody = document.querySelector(".tcontent ");
-                data.forEach(user => {
-                    let row = document.createElement("tr");
-                    row.innerHTML = `
-                    <td>${user.name}</td>
-                    <td>${user.address}</td>
-                    <td>${user.number}</td>
-                    <td>${user.id}</td>
-                    <td><button class="delete" onclick = "del()">Delete</button></td>
-                    <td><button class="edit" onclick = "edi()">edit</button></td>`
-                    tbody.appendChild(row);
+    for (const user of datarec) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${user.name}</td>
+            <td>${user.address}</td>
+            <td>${user.number}</td>
+            <td>${user.id}</td>
+            <td><button class="delete" onclick="del(${user.id})">Delete</button></td>
+            <td><button class="edit" onclick="edi(${user.id})">Edit</button></td>`;
+        allRows.push(row);
+    }   
+
+    // Clears the table and adds all rows in one command
+    tbody.replaceChildren(...allRows);
+}
+      //     function showData(datarec) {
+    //     let tbody = document.querySelector(".tcontent");
+
+    //     // 1. Generate the HTML for ALL rows using map
+    //     const tableHTML = datarec.map(user => `
+    //         <tr>
+    //             <td>${user.name}</td>
+    //             <td>${user.address}</td>
+    //             <td>${user.number}</td>
+    //             <td>${user.id}</td>
+    //             <td><button class="delete" onclick="del(${user.id})">Delete</button></td>
+    //             <td><button class="edit" onclick="edi(${user.id})">Edit</button></td>
+    //         </tr>
+    //     `).join(""); // Join the array of strings into one long string
+
+    //     // 2. Replace the entire content of the tbody in one go
+    //     tbody.innerHTML = tableHTML;
+    // }
+        // function showData(datarec) {
+        //     // console.log("before showData");
+        //     // console.log(datarec);
+        //     // console.log("after showData");
+        //     let tbody = document.querySelector(".tcontent");
+        //     datarec.forEach((user, index) => {
+        //         console.log("inside loop");
+        //             // setTimeout(() => {
+        //                 let row = document.createElement("tr");
+        //                 row.innerHTML = `
+        //                 <td>${user.name}</td>
+        //                 <td>${user.address}</td>
+        //                 <td>${user.number}</td>
+        //                 <td>${user.id}</td>
+        //                 <td><button class="delete" onclick = "del(${user.id})">Delete</button></td>
+        //                 <td><button class="edit" onclick = "edi(${user.id})">edit</button></td>`
+        //                 // }, index * 1000);
+        //                 tbody.appendChild(row);
+        //                 // fetchData.push(row)    
+        //             });
+        //             // console.log(fetchData);
+        //             // tbody.appendChild(fetchData);
+            
+        // }
+        // showData()
+        // async function get_api() {
+            //     // try {
+                //         // console.log(abc);
+                
+                //         if (!abc.ok) {
+                    //             throw new Error("Network response was not ok");
+                    //         }
+                    //         let data = await abc.json();
+                    //         // console.log(data);
+                    
+                    //         let tbody = document.querySelector(".tcontent ");
+                    //         data.forEach((user, index) => {
+                        //             setTimeout(() => {
+                            //                 let row = document.createElement("tr");
+                            //                 row.innerHTML = `
+                            //                 <td>${user.name}</td>
+                            //                 <td>${user.address}</td>
+                            //                 <td>${user.number}</td>
+                            //                 <td>${user.id}</td>
+                            //                 <td><button class="delete" onclick = "del(${user.id})">Delete</button></td>
+        //                 <td><button class="edit" onclick = "edi(${user.id})">edit</button></td>`
+        //                 tbody.appendChild(row);
+        //             }, index * 1000);
+        //         });
+        //         //     // function del(){
+            //         //     //     let abcd = toString(prompt("enter the first value"));
+            //         //     //     data.forEach(user => {
+                //         //     //         if (user.id == abcd) {
+                    //         //     //             let row = document.createElement("tr");
+                    //         //     //             row.innerHTML = `
+                    //         //     //             <td>${user.name}</td>
+                    //         //     //             <td>${user.address}</td>
+                    //         //     //             <td>${user.number}</td>
+                    //         //     //             <td>${user.id}</td>
+                    //         //     //             <td><button class="delete" onclick = "del()">Delete</button></td>
+                    //         //     //             <td><button class="edit" onclick = "edi()">edit</button></td>`
+                    //         //     //      tbody.remove(row);
+                    //         //     //         }
+                    //         //     //     });
+                    //         //     }
+                    //     }
+                    //     // catch (error) {
+                    //     //     console.log("ishue in data fatching");
+                    //     // }
+                    // // };
+                    
+            async function del (id) {
+                console.log(id);
+                // let row = document.createElement("tr"); 
+                // row.innerHTML = ` <td>nodata </td>`
+                // tbody.replaceWith(row);
+                // console.log("called before fetch delete");
+                
+                await fetch(`${abc}/${id}`,{
+                    method:"DELETE",
+                }).then(()=>{
+                    console.log("called inside success");
+                    getApi(showData) 
                 });
-                function del(){
-                    let abcd = toString(prompt("enter the first value"));
-                    data.forEach(user => {
-                        if (user.id == abcd) {
-                            let row = document.createElement("tr");
-                            row.innerHTML = `
-                            <td>${user.name}</td>
-                            <td>${user.address}</td>
-                            <td>${user.number}</td>
-                            <td>${user.id}</td>
-                            <td><button class="delete" onclick = "del()">Delete</button></td>
-                            <td><button class="edit" onclick = "edi()">edit</button></td>`
-                     tbody.remove(row);
-                        }
-                    });
-                }
+                // console.log("called after fetch delete");
+                // console.log(abc);
+                // alert("Hello")
+                // console.log("called before getApi delete");
+                // console.log("called after getApi delete");
             }
-            catch (error) {
-                console.log("ishue in data fatching");
-            }
-        };
-        get_api()
+            getApi(showData)
+        // getApi()
+        
+        
+        // get_api()
+        // // setTimeout(get_api,1000);
     </script>
 </body>
 
